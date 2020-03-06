@@ -9,11 +9,11 @@ import Login from './views/Login';
 import NotFound from './views/NotFound';
 import Dashboard from './views/Dashboard';
 import facebookGoogleService from './services/facebookGoogleService';
-import UserRoleView from './views/UserRoleView';
 import AppLayout from './views/appLayout';
 import Settings from './views/SettingsView';
 import tripRequests from './views/tripRequests';
 import Trips from './components/trips/trips';
+import AccommodationsView from './views/AccommodationsView';
 
 const routes = [
 	{
@@ -89,6 +89,11 @@ const routes = [
 				path: '/trips/:type',
 				exact: true,
 				component: Trips
+			},
+			{
+				path: '/management/accommodations',
+				exact: true,
+				component: AccommodationsView
 			},
 			{
 				component: () => <Redirect to='/errors/error-404' />
